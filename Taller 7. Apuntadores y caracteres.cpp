@@ -5,12 +5,14 @@
 void imprimirNombres(char* nombres[], int n);
 void invertirCadena(char* cadena);
 
-int main() {
+int main() 
+{
     int opcion;
     int n = 3;
     char* nombres[n];
     
-    while (1) {
+    while (1) 
+    {
         printf("\n\tMenú:\n");
         printf("1. Ingresar y mostrar 3 nombres\n");
         printf("2. Invertir una cadena\n");
@@ -23,7 +25,8 @@ int main() {
         {
             case 1:
             {
-                for (int i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++) 
+                {
                     nombres[i] = (char*)malloc(50); //malloc me devuelve un puntero void y por así decir guarda la cadena que mande
                     printf("Ingrese un nombre: ");
                     scanf("%s", nombres[i]);
@@ -51,16 +54,20 @@ int main() {
                 char **palabras = (char**)malloc(m * sizeof(char*));
                 char **apuntadores = (char**)malloc(m * sizeof(char*));
 
-                for (int i = 0; i < m; i++) {
+                for (int i = 0; i < m; i++) 
+                {
                     palabras[i] = (char*)malloc(50);
                     printf("Ingrese una palabra: ");
                     scanf("%s", palabras[i]);
                     apuntadores[i] = palabras[i];
                 }
 
-                for (int i = 0; i < m - 1; i++) {
-                    for (int j = i + 1; j < m; j++) {
-                        if (strcmp(apuntadores[i], apuntadores[j]) > 0) {
+                for (int i = 0; i < m - 1; i++) 
+                {
+                    for (int j = i + 1; j < m; j++) 
+                    {
+                        if (strcmp(apuntadores[i], apuntadores[j]) > 0) 
+                        {
                             char *temp = apuntadores[i];
                             apuntadores[i] = apuntadores[j];
                             apuntadores[j] = temp;
